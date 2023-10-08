@@ -1,0 +1,138 @@
+$c: 40px
+$u: $c
+$lineThickness: 3px
+$lineColor: black
+$line: $lineThickness solid $lineColor
+
+.e
+  position: absolute
+  box-sizing: border-box
+
+body
+  font-family: sans-serif
+  background-color: white
+  margin: 0
+  padding: 0
+  /* https://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css */
+  background-size: $c $c
+  background-image: linear-gradient(to right, #e5e5e5 1px, transparent 1px), linear-gradient(to bottom, #e5e5e5 1px, transparent 1px)
+
+
+@for $i from 0 through 100
+  .b#{$i}
+    bottom: $c * $i
+  .l#{$i}
+    left: $c * $i
+  .r#{$i}
+    right: $c * $i
+  // text top
+  .tt#{$i}
+    top: $c * $i + calc($c / 10)
+  .t#{$i}
+    top: $c * $i
+  .h#{$i}
+    height: $c * $i
+  .w#{$i}
+    width: $c * $i
+
+.black
+  @extend .e
+  background-color: black
+
+.white
+  @extend .e
+  background-color: white
+
+.yellow
+  @extend .e
+  background-color: yellow
+
+.red
+  @extend .e
+  background-color: red
+
+.cyan
+  @extend .e
+  background-color: cyan
+
+.blue
+  @extend .e
+  background-color: blue
+
+.green
+  @extend .e
+  background-color: green
+
+.sq
+  width: $c
+  height: $c
+
+.bl
+  border-left: $line
+
+.br
+  border-right: $line
+
+.bt
+  border-top: $line
+
+.bb
+  border-bottom: $line
+
+
+.boxBase
+  @extend .e
+  @extend .bl
+  @extend .br
+  @extend .bt
+  @extend .bb
+
+
+.splitBoxH::after
+  content: ''
+  position: absolute
+  top: 47%
+  left: 0
+  right: 0
+  height: $lineThickness
+  background-color: $lineColor
+
+
+.splitBoxV::after
+  content: ''
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 45%
+  width: $lineThickness
+  background-color: $lineColor
+
+
+@for $i from 0 through 10
+  @for $j from 0 through 10
+    .box#{$i}x#{$j}
+      @extend .boxBase
+      width: calc($c * $i)
+      height: calc($c * $j)
+
+
+.text
+  @extend .e
+  font-size: $u
+  font-weight: bold
+
+.char
+  @extend .text
+  padding-left: 10px
+  margin-top: -1px
+
+// .california
+//   font-family: sans-serif
+//   font-weight: bold
+//   font-size: 24px
+//   background-color: white
+//   height: $c
+//   padding-top: 7px
+//   border-left: 1px #e5e5e5 solid
+//   border-top: 1px #e5e5e5 solid
+

@@ -1,0 +1,107 @@
+<html ng-app>
+
+<head>
+  <title>Href Attribute Example</title>
+  <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+
+<body>
+  <div class="box-creature e group l1 t0">
+    <!-- it's a table with nullable fields. -->
+    <div class="e right-boxes-in-line l4">
+
+      <div class="black t1 w1 h1">
+      </div>
+
+      <div class="white t2 w1 h1 bt bb">
+      </div>
+
+      <div class="blue t4 w1 bt bb h1">
+      </div>
+
+      <div class="e splitBoxH t5 w1 h1 bb"></div>
+      <div class="e splitBoxV t6 w1 h1 bb"></div>
+
+      <div class="
+        white
+        t7
+        w1 h2
+        "></div>
+
+      <div class="
+        white
+        t9
+        w1 h1
+        bb bt"></div>
+
+      <div class="
+        red
+        t10
+        w1 h1
+        bb"></div>
+    </div>
+
+    <div class="e l1 container-boxes" style="">
+      <div class="white
+        t1
+        w3 h3
+        bb">
+      </div>
+
+      <div class="box3x10 t1">
+      </div>
+
+      <div class="box4x10 t1">
+      </div>
+
+      <div class="blanc t4 w3 h1">
+      </div>
+
+      <div class="white box3x5 t5">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tall-organism">
+    <div class="char l1 t19">
+      5
+    </div>
+
+    <div class="char l2 t19">
+      5
+    </div>
+
+    <div class="char l3 t19">
+      5
+    </div>
+
+    <div class="red sq l4 t19"></div>
+
+    <div class="yellow l1 t20 w1 h1 bb">
+    </div>
+
+    <div class="e l1 t1 w1 h20 bl">
+    </div>
+  </div>
+
+  <div class="wide-line">
+    <div class="e l15 t15 w20 h1 bb">
+    </div>
+  </div>
+
+  <!-- <div class="text l2 tt5"> -->
+  <!--   Imperative -->
+  <!-- </div> -->
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io.connect();
+
+    socket.on('reload', () => {
+      location.reload();
+    });
+  </script>
+</body>
+
+</html>
