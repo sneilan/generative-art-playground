@@ -29,6 +29,7 @@ There's a couple types of classes.
 * Positioning classes
 * Border classes
 * Coloration classes
+* Splitter classes
 
 Each positioning class is a character followed by a number 0-100 describing how much movement should happen. For example, the class "l" means move N units from the left. So l5 would mean move this div 5 units from the left.
 
@@ -46,6 +47,7 @@ The coloration classes are
 5) green
 6) black
 7) white
+Adding these to a div just fills in the background of the div.
 
 The border classes are
 1) bb (border bottom)
@@ -53,6 +55,13 @@ The border classes are
 3) bl (border left)
 4) br (border right)
 5) bc (border collie. a type of dog used to herd sheep)
+They just add borders around whatever elements you add them to.
+
+The splitter classes are
+1) splitBoxH
+2) splitBoxV
+They draw a line vertically or horizontally down the center of the div. Heavily inspired by (Frank Lloyd Wright)
+![image](https://github.com/sneilan/generative-art-playground/assets/91979/f3397d8f-553e-4154-b2d5-a3f3c61b3d56)
 
 There's another hacking class called e which stands for element. This makes the element absolutely positioned. I need to clean that up a bit so I don't have to specify this. Everything in this project is absolutely positioned anyway!
 
